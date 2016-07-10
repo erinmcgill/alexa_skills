@@ -10,22 +10,25 @@
      ]
     },
     {
-      "intent": "ListOfActivities",
+      "intent": "IngredientsIntent",
       "slots": [
       {
-        "name": "Activities",
-	"type": "LIST_OF_ACTIVITIES"
+        "name" : "Item",
+        "type": "LIST_OF_ITEMS"
       }
      ]
     },
     {
-      "intent": "ListOfIngredients",
+      "intent": "DescriptionIntent",
       "slots": [
       {
-        "name": "ItemIngredients",
-	"type": "LIST_OF_INGREDIENTS"
+        "name" : "Item",
+        "type": "LIST_OF_ITEMS"
       }
      ]
+    },
+    {
+      "intent": "ActivityIntent"
     },
    {
       "intent": "AMAZON.HelpIntent"
