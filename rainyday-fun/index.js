@@ -22,6 +22,9 @@
 'use strict';
 
 var AlexaSkill = require('./AlexaSkill'),
+    ingredients = require('./ingredients'),
+    activities = require('./activities'),
+    descriptions = require('./descriptions'),
     recipes = require('./recipes');
 
 var APP_ID = undefined; //replace with 'amzn1.echo-sdk-ams.app.[your-unique-value-here]';
@@ -49,13 +52,105 @@ MinecraftHelper.prototype.eventHandlers.onLaunch = function (launchRequest, sess
 };
 
 MinecraftHelper.prototype.intentHandlers = {
+    "ActivityIntent": function (intent, session, response) {
+        var cardTitle = "Today's activities",
+            activity = activities['activities'],
+            speechOutput,
+            repromptOutput;
+        if (activity) {
+            speechOutput = {
+                speech: activity,
+                type: AlexaSkill.speechOutputType.PLAIN_TEXT
+            };
+            response.tellWithCard(speechOutput, cardTitle, activity);
+        } else {
+            var speech;
+            speech = "I'm sorry, I currently do not know that recipe. What else can I help with?";
+            speechOutput = {
+                speech: speech,
+                type: AlexaSkill.speechOutputType.PLAIN_TEXT
+            };
+            repromptOutput = {
+                speech: "What else can I help with?",
+                type: AlexaSkill.speechOutputType.PLAIN_TEXT
+            };
+            response.ask(speechOutput, repromptOutput);
+        }
+    },
+    "DescriptionIntent": function (intent, session, response) {
+        var itemSlot = intent.slots.Item,
+            itemName;
+        if (itemSlot && itemSlot.value){
+            itemName = itemSlot.value.toLowerCase();
+        }
+        var cardTitle = "Description for " + itemName,
+            description = descriptions[itemName],
+            speechOutput,
+            repromptOutput;
+        if (description) {
+            speechOutput = {
+                speech: description,
+                type: AlexaSkill.speechOutputType.PLAIN_TEXT
+            };
+            response.tellWithCard(speechOutput, cardTitle, description);
+        } else {
+            var speech;
+            if (itemName) {
+                speech = "I'm sorry, I currently do not know the description for " + itemName + ". What else can I help with?";
+            } else {
+                speech = "I'm sorry, I currently do not know what that is. What else can I help with?";
+            }
+            speechOutput = {
+                speech: speech,
+                type: AlexaSkill.speechOutputType.PLAIN_TEXT
+            };
+            repromptOutput = {
+                speech: "What else can I help with?",
+                type: AlexaSkill.speechOutputType.PLAIN_TEXT
+            };
+            response.ask(speechOutput, repromptOutput);
+        }
+    },
+    "IngredientsIntent": function (intent, session, response) {
+        var itemSlot = intent.slots.Item,
+            itemName;
+        if (itemSlot && itemSlot.value){
+            itemName = itemSlot.value.toLowerCase();
+        }
+        var cardTitle = "Ingredients for " + itemName,
+            ingredient = ingredients[itemName],
+            speechOutput,
+            repromptOutput;
+        if (ingredient) {
+            speechOutput = {
+                speech: ingredient,
+                type: AlexaSkill.speechOutputType.PLAIN_TEXT
+            };
+            response.tellWithCard(speechOutput, cardTitle, ingredient);
+        } else {
+            var speech;
+            if (itemName) {
+                speech = "I'm sorry, I currently do not know the ingredients for " + itemName + ". What else can I help with?";
+            } else {
+                speech = "I'm sorry, I currently do not know the ingredients. What else can I help with?";
+            }
+            speechOutput = {
+                speech: speech,
+                type: AlexaSkill.speechOutputType.PLAIN_TEXT
+            };
+            repromptOutput = {
+                speech: "What else can I help with?",
+                type: AlexaSkill.speechOutputType.PLAIN_TEXT
+            };
+            response.ask(speechOutput, repromptOutput);
+        }
+    },
     "RecipeIntent": function (intent, session, response) {
         var itemSlot = intent.slots.Item,
             itemName;
         if (itemSlot && itemSlot.value){
             itemName = itemSlot.value.toLowerCase();
         }
-
         var cardTitle = "Recipe for " + itemName,
             recipe = recipes[itemName],
             speechOutput,
