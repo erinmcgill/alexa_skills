@@ -1,4 +1,23 @@
-RecipeIntent give me a list of {ListOfActivities}
+ActivityIntent what can I do today
+ActivityIntent what can I do
+ActivityIntent what should we do
+ActivityIntent what should we do today
+ActivityIntent what can we do
+ActivityIntent what can we do today
+ActivityIntent what is there to do
+ActivityIntent what is there to do today
+DescriptionIntent what is a {Item}
+DescriptionIntent what is {Item}
+DescriptionIntent what are {Item}
+DescriptionIntent what {Item} is
+DescriptionIntent what a {Item} is
+DescriptionIntent what an {Item} is
+IngredientsIntent what are the ingredients for {Item}
+IngredientsIntent what are the ingredients for a {Item}
+IngredientsIntent what do I need to make {Item}
+IngredientsIntent what is needed to make {Item}
+IngredientsIntent what is needed for {Item}
+IngredientsIntent for the ingredients for {Item}
 RecipeIntent how can I build a {Item}
 RecipeIntent how can I build an {Item}
 RecipeIntent how can I build {Item}
@@ -63,66 +82,66 @@ RecipeIntent recipe for {Item}
 RecipeIntent recipes for a {Item}
 RecipeIntent recipes for an {Item}
 RecipeIntent recipes for {Item}
-RecipeIntent what are the ingredients for a {Item}
-RecipeIntent what are the ingredients for an {Item}
-RecipeIntent what are the ingredients for {Item}
-RecipeIntent what do I need for a {Item}
-RecipeIntent what do I need for an {Item}
-RecipeIntent what do I need for {Item}
-RecipeIntent what do I need to build a {Item}
-RecipeIntent what do I need to build an {Item}
-RecipeIntent what do I need to build {Item}
-RecipeIntent what do I need to craft a {Item}
-RecipeIntent what do I need to craft an {Item}
-RecipeIntent what do I need to craft {Item}
-RecipeIntent what do I need to get for a {Item}
-RecipeIntent what do I need to get for an {Item}
-RecipeIntent what do I need to get for {Item}
-RecipeIntent what do I need to get to build a {Item}
-RecipeIntent what do I need to get to build an {Item}
-RecipeIntent what do I need to get to build {Item}
-RecipeIntent what do I need to get to craft a {Item}
-RecipeIntent what do I need to get to craft an {Item}
-RecipeIntent what do I need to get to craft {Item}
-RecipeIntent what do I need to get to make a {Item}
-RecipeIntent what do I need to get to make an {Item}
-RecipeIntent what do I need to get to make {Item}
-RecipeIntent what do I need to have to build a {Item}
-RecipeIntent what do I need to have to build an {Item}
-RecipeIntent what do I need to have to build {Item}
-RecipeIntent what do I need to have to craft a {Item}
-RecipeIntent what do I need to have to craft an {Item}
-RecipeIntent what do I need to have to craft {Item}
-RecipeIntent what do I need to have to make a {Item}
-RecipeIntent what do I need to have to make an {Item}
-RecipeIntent what do I need to have to make {Item}
-RecipeIntent what do I need to make a {Item}
-RecipeIntent what do I need to make an {Item}
-RecipeIntent what do I need to make {Item}
-RecipeIntent what do you need for a {Item}
-RecipeIntent what do you need for an {Item}
-RecipeIntent what do you need for {Item}
-RecipeIntent what ingredients do I need to build a {Item}
-RecipeIntent what ingredients do I need to build an {Item}
-RecipeIntent what ingredients do I need to build {Item}
-RecipeIntent what ingredients do I need to craft a {Item}
-RecipeIntent what ingredients do I need to craft an {Item}
-RecipeIntent what ingredients do I need to craft {Item}
-RecipeIntent what ingredients do I need to make a {Item}
-RecipeIntent what ingredients do I need to make an {Item}
-RecipeIntent what ingredients do I need to make {Item}
-RecipeIntent what is in a {Item}
-RecipeIntent what is in an {Item}
-RecipeIntent what is in {Item}
+IngredientsIntent what are the ingredients for a {Item}
+IngredientsIntent what are the ingredients for an {Item}
+IngredientsIntent what are the ingredients for {Item}
+IngredientsIntent what do I need for a {Item}
+IngredientsIntent what do I need for an {Item}
+IngredientsIntent what do I need for {Item}
+IngredientsIntent what do I need to build a {Item}
+IngredientsIntent what do I need to build an {Item}
+IngredientsIntent what do I need to build {Item}
+IngredientsIntent what do I need to craft a {Item}
+IngredientsIntent what do I need to craft an {Item}
+IngredientsIntent what do I need to craft {Item}
+IngredientsIntent what do I need to get for a {Item}
+IngredientsIntent what do I need to get for an {Item}
+IngredientsIntent what do I need to get for {Item}
+IngredientsIntent what do I need to get to build a {Item}
+IngredientsIntent what do I need to get to build an {Item}
+IngredientsIntent what do I need to get to build {Item}
+IngredientsIntent what do I need to get to craft a {Item}
+IngredientsIntent what do I need to get to craft an {Item}
+IngredientsIntent what do I need to get to craft {Item}
+IngredientsIntent what do I need to get to make a {Item}
+IngredientsIntent what do I need to get to make an {Item}
+IngredientsIntent what do I need to get to make {Item}
+IngredientsIntent what do I need to have to build a {Item}
+IngredientsIntent what do I need to have to build an {Item}
+IngredientsIntent what do I need to have to build {Item}
+IngredientsIntent what do I need to have to craft a {Item}
+IngredientsIntent what do I need to have to craft an {Item}
+IngredientsIntent what do I need to have to craft {Item}
+IngredientsIntent what do I need to have to make a {Item}
+IngredientsIntent what do I need to have to make an {Item}
+IngredientsIntent what do I need to have to make {Item}
+IngredientsIntent what do I need to make a {Item}
+IngredientsIntent what do I need to make an {Item}
+IngredientsIntent what do I need to make {Item}
+IngredientsIntent what do you need for a {Item}
+IngredientsIntent what do you need for an {Item}
+IngredientsIntent what do you need for {Item}
+IngredientsIntent what ingredients do I need to build a {Item}
+IngredientsIntent what ingredients do I need to build an {Item}
+IngredientsIntent what ingredients do I need to build {Item}
+IngredientsIntent what ingredients do I need to craft a {Item}
+IngredientsIntent what ingredients do I need to craft an {Item}
+IngredientsIntent what ingredients do I need to craft {Item}
+IngredientsIntent what ingredients do I need to make a {Item}
+IngredientsIntent what ingredients do I need to make an {Item}
+IngredientsIntent what ingredients do I need to make {Item}
+IngredientsIntent what is in a {Item}
+IngredientsIntent what is in an {Item}
+IngredientsIntent what is in {Item}
 RecipeIntent what is the recipe for a {Item}
 RecipeIntent what is the recipe for an {Item}
 RecipeIntent what is the recipe for {Item}
-RecipeIntent what's in a {Item}
-RecipeIntent what's in an {Item}
-RecipeIntent what's in {Item}
-RecipeIntent what's the recipe for a {Item}
-RecipeIntent what's the recipe for an {Item}
-RecipeIntent what's the recipe for {Item}
+IngredientsIntent what's in a {Item}
+IngredientsIntent what's in an {Item}
+IngredientsIntent what's in {Item}
+IngredientsIntent what's the recipe for a {Item}
+IngredientsIntent what's the recipe for an {Item}
+IngredientsIntent what's the recipe for {Item}
 RecipeIntent how to craft {Item}
 RecipeIntent how to craft a {Item}
 RecipeIntent how to craft an {Item}
