@@ -191,8 +191,8 @@ MinecraftHelper.prototype.intentHandlers = {
     },
 
     "AMAZON.HelpIntent": function (intent, session, response) {
-        var speechText = "You can ask questions about minecraft such as, what's the recipe for a chest, or, you can say exit... Now, what can I help you with?";
-        var repromptText = "You can say things like, what's the recipe for a chest, or you can say exit... Now, what can I help you with?";
+        var speechText = "You can ask questions about RainyDay Fun such as, what can I do today, what's the recipe for rock candy or, you can say exit... Now, what can I help you with?";
+        var repromptText = "You can say things like, what's the recipe for rock candy or you can say exit... Now, what can I help you with?";
         var speechOutput = {
             speech: speechText,
             type: AlexaSkill.speechOutputType.PLAIN_TEXT
